@@ -1,0 +1,129 @@
+{
+  "card_name": "【ぬくもりの結束】仙波 綾子 (捕)",
+  "attribute": "花",
+  "rarity": "SSR",
+  "position": {
+    "捕": "◎",
+    "遊": "○",
+    "二": "△"
+  },
+  "status": {
+    "ミート": 3270,
+    "パワー": 3454,
+    "走力": 3070,
+    "守備": 3504
+  },
+  "cinderella": [
+    {
+      "rank": "★★",
+      "card_name": "焼きそば生姜パン",
+      "attribute": "花",
+      "power": null,
+      "speed": null,
+      "technique": null,
+      "effect": "P型メニュー1枚までと同時実行可能　獲得ポイント上昇　追加で1回行動"
+    },
+    {
+      "rank": "★★",
+      "card_name": "円陣",
+      "attribute": null,
+      "power": null,
+      "speed": null,
+      "technique": null,
+      "effect": "バクダンと同時に実行　バクダンを破棄させ追加で1回行動　実行したあと消滅する"
+    },
+    {
+      "rank": "★★★",
+      "card_name": "マシンバッティング",
+      "attribute": "花",
+      "power": 30,
+      "speed": 0,
+      "technique": 17,
+      "effect": null
+    }
+  ],
+  "skills": [
+    {
+      "rank": "★★★",
+      "skill_name": "湧き上がるパワー",
+      "condition": "なし",
+      "effect": "自身のミート・肩が大幅に上昇し、パワーが超絶に上昇する"
+    },
+    {
+      "rank": "★★★",
+      "skill_name": "豪打の奥義+(条件あり)",
+      "condition": "打席時",
+      "effect": "自身のパワーが超バツグンに上昇し、ミートが大幅に上昇する"
+    },
+    {
+      "rank": "★★",
+      "skill_name": "捨て身の秘奥義",
+      "condition": "7回以降",
+      "effect": "自身の守備が少し減少するが、走力・パワーが超大幅に上昇する"
+    },
+    {
+      "rank": "★★",
+      "skill_name": "豪打の奥義",
+      "condition": "打席時",
+      "effect": "自身のパワーが超大幅に上昇し、ミートが上昇する"
+    },
+    {
+      "rank": "★★",
+      "skill_name": "激励の奥義",
+      "condition": "まれに/守備時/走者得点圏",
+      "effect": "味方投手の粘り強さがわずかに上昇し、コントロールがバツグンに上昇する"
+    },
+    {
+      "rank": "★",
+      "skill_name": "強肩の極意",
+      "condition": "なし",
+      "effect": "自身の肩が大幅に上昇し、パワーが大きく上昇する"
+    },
+    {
+      "rank": "★",
+      "skill_name": "打席時/2打席目まで",
+      "condition": "なし",
+      "effect": "敵守備の能力を減少させる"
+    },
+    {
+      "rank": "★",
+      "skill_name": "逆境の心得",
+      "condition": "打席時/5回以降/ﾋﾞﾊｲﾝﾄﾞ",
+      "effect": "自身のパワーが大きく上昇する"
+    },
+    {
+      "rank": "★",
+      "skill_name": "パワースローの心得",
+      "condition": "なしﾞ",
+      "effect": "自身の守備が少し上昇し、パワーがごくわずかに上昇する"
+    },
+    {
+      "rank": "★",
+      "skill_name": "パワーの基礎",
+      "condition": "なし",
+      "effect": "自身のパワーがわずかに上昇する"
+    }
+  ],
+  "ability": [
+    {
+      "ability_name": "飛躍への戦略",
+      "max_level": 7,
+      "effect": "自身のミート・パワーが上昇し、投手の場合、球速も大幅に上昇する"
+    },
+    {
+      "ability_name": "好リード",
+      "max_level": 5,
+      "effect": "キャッチャーのとき、自身のリードが上昇し、守備も大幅に上昇する"
+    },
+    {
+      "ability_name": "持ちつ持たれつ",
+      "max_level": 7,
+      "effect": "キャッチャーのとき、投手のコントロールが大きく上昇し、クイックが大幅に上昇する"
+    },
+    {
+      "ability_name": "ミート◎",
+      "max_level": 5,
+      "effect": "自身のミートが超大幅に上昇する"
+    }
+  ]
+}
