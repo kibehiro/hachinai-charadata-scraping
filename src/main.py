@@ -13,3 +13,6 @@ with psycopg2.connect(DATABASE_URL) as conn:
 
         db_init.create_table(cur)
         conn.commit()
+
+        db_init.insert_dummy_data(cur)
+        conn.commit()
