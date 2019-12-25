@@ -3,10 +3,9 @@ from psycopg2.extras import DictCursor
 
 from src import db_init
 from src import settings
+from src import make_db
 
 DATABASE_URL = settings.DATABASE_URL
-
-# print(DATABASE_URL)
 
 with psycopg2.connect(DATABASE_URL) as conn:
     with conn.cursor(cursor_factory=DictCursor) as cur:
@@ -14,5 +13,5 @@ with psycopg2.connect(DATABASE_URL) as conn:
         db_init.create_table(cur)
         conn.commit()
 
-        db_init.insert_dummy_data(cur)
+        make_db.make_db(cur)
         conn.commit()
