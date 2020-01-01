@@ -1,0 +1,156 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CharaData Validate",
+  "description": "ちゃんとスクレイピングできてるかチェックします",
+  "definitions": {
+    "cinderella_check": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "integer"
+        }
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "card_name": {
+      "type": "string",
+      "description": "カード名"
+    },
+    "attribute": {
+      "type": "string",
+      "description": "属性"
+    },
+    "rarity": {
+      "type": "string",
+      "description": "レア度"
+    },
+    "position": {
+      "type": "object",
+      "description": "ポジション",
+      "properties": {
+      },
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "object",
+      "properties": {
+      },
+      "additionalProperties": {
+        "anyOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    },
+    "cinderella_cards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rank": {
+            "type": "string"
+          },
+          "card_name": {
+            "type": "string"
+          },
+          "attribute": {
+            "type": "string"
+          },
+          "power": {
+            "$ref": "#/definitions/cinderella_check"
+          },
+          "speed": {
+            "$ref": "#/definitions/cinderella_check"
+          },
+          "technique": {
+            "$ref": "#/definitions/cinderella_check"
+          },
+          "effect": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "rank",
+          "card_name",
+          "attribute",
+          "power",
+          "speed",
+          "technique",
+          "effect"
+        ]
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rank": {
+            "type": "string"
+          },
+          "skill_name": {
+            "type": "string"
+          },
+          "condition": {
+            "type": "string"
+          },
+          "effect": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "rank",
+          "skill_name",
+          "condition",
+          "effect"
+        ]
+      }
+    },
+    "ability": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ability_name": {
+            "type": "string"
+          },
+          "max_level": {
+            "type": "integer"
+          },
+          "effect": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false,
+        "required": [
+          "ability_name",
+          "max_level",
+          "effect"
+        ]
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "card_name",
+    "attribute",
+    "rarity",
+    "position",
+    "status",
+    "cinderella_cards",
+    "skills",
+    "ability"
+  ]
+}
