@@ -1,13 +1,14 @@
 from src import get_pages
 
 
-def make_db(cur):
+def make_db(cur, conn):
     url_list = ['https://www65.atwiki.jp/hachinai_nanj/pages/455.html',
                 'https://www65.atwiki.jp/hachinai_nanj/pages/456.html',
                 'https://www65.atwiki.jp/hachinai_nanj/pages/457.html',
                 'https://www65.atwiki.jp/hachinai_nanj/pages/458.html']
     for url in url_list:
         get_pages.get_pages(url, cur)
+        conn.commit()
 
 
 def insert_data(data, cur):
