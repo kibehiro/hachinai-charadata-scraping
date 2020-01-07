@@ -1,4 +1,4 @@
-from src import get_pages
+from hachinai_scraping import get_pages
 
 
 def make_db(cur, conn):

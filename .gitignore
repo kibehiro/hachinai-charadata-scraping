@@ -1,5 +1,4 @@
 .idea/
 venv/
 .env
-*LOG.txt
-DEBUG*.*
+LOG_FILE/

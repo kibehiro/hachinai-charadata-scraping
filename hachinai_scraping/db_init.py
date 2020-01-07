@@ -1,6 +1,6 @@
 import json
 
-from src import make_db
+from hachinai_scraping import make_db
 
 
 def create_table(cur):

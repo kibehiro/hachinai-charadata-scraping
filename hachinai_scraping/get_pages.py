@@ -8,7 +8,7 @@ import requests
 from bs4 import BeautifulSoup
 from jsonschema import validate, ValidationError
 
-from src import make_db
+from hachinai_scraping import make_db
 
 
 def get_attribute(html):
@@ -124,8 +124,8 @@ def get_pages(url, cur):
     card_list_html = requests.get(url)
     card_list_soup = BeautifulSoup(card_list_html.text, 'lxml')
 
-    success_log_file = open('../SUCCESS_LOG.txt', mode='a', encoding='UTF-8')
-    error_log_file = open('../ERROR_LOG.txt', mode='a', encoding='UTF-8')
+    success_log_file = open('../LOG_FILE/SUCCESS_LOG.txt', mode='a', encoding='UTF-8')
+    error_log_file = open('../LOG_FILE/ERROR_LOG.txt', mode='a', encoding='UTF-8')
 
     with open('../json/schema.json', encoding='utf-8', mode='r') as f:
         json_schema = json.load(f)
@@ -178,7 +178,7 @@ def get_pages(url, cur):
 
             validate(chara_data, json_schema)
 
-            with open('../json/DEBUG_CARD_INFO.json', encoding='utf-8', mode='w') as f:
+            with open('../LOG_FILE/DEBUG_CARD_INFO.json', encoding='utf-8', mode='w') as f:
                 f.write(json.dumps(chara_data, ensure_ascii=False, indent='\t'))
 
             make_db.insert_data(chara_data, cur)
