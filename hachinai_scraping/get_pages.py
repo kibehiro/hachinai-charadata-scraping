@@ -196,8 +196,9 @@ def get_pages(card_url):
         validate(chara_data, json_schema)
     except ValidationError as e:
         write_error_log(card_url)
-        write_error_log(card_url)
 
     print('SUCCESS URL: {}'.format(card_url))
+    with open('../Logs/success.log', mode='a', encoding='UTF-8') as f:
+        f.write('\nSUCCESS URL: {}'.format(card_url))
 
     return chara_data
