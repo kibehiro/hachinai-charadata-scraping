@@ -7,6 +7,9 @@
 ## How to Use
 PostgreSQLを使用するので事前にインストールをお願いします。  
 .envファイルに.env.sampleファイルに習って入力してください。  
+main.pyを実行するとDBの作成が始まります。  
+内部的には、以下のinit_dbとmake_dbが順に走っているだけです。
+  
 ### init_db.py  
 実行するとDBが初期化されます
 - Option
