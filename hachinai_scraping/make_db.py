@@ -1,14 +1,18 @@
-from hachinai_scraping import get_pages
+import psycopg2
+
+from hachinai_scraping import get_pages, settings
 
 
-def make_db(cur, conn):
-    url_list = ['https://www65.atwiki.jp/hachinai_nanj/pages/455.html',
-                'https://www65.atwiki.jp/hachinai_nanj/pages/456.html',
-                'https://www65.atwiki.jp/hachinai_nanj/pages/457.html',
-                'https://www65.atwiki.jp/hachinai_nanj/pages/458.html']
-    for url in url_list:
-        get_pages.get_pages(url, cur)
-        conn.commit()
+def make_db():
+    with psycopg2.connect(DATABASE_URL) as conn:
+        with conn.cursor() as cur:
+            url_list = ['https://www65.atwiki.jp/hachinai_nanj/pages/455.html',
+                        'https://www65.atwiki.jp/hachinai_nanj/pages/456.html',
+                        'https://www65.atwiki.jp/hachinai_nanj/pages/457.html',
+                        'https://www65.atwiki.jp/hachinai_nanj/pages/458.html']
+            for url in url_list:
+                get_pages.get_pages(url, cur)
+                conn.commit()
 
 
 def insert_data(data, cur):
@@ -116,3 +120,8 @@ def insert_data(data, cur):
         cur.execute('insert into card_abilities('
                     'card_id, ability_id)'
                     'values (%s, %s)', (card_id, ability_id,))
+
+
+if __name__ == '__main__':
+    DATABASE_URL = settings.DATABASE_URL
+    make_db()
