@@ -1,12 +1,12 @@
-drop table if exists card_informations;
 drop table if exists card_status;
 drop table if exists card_positions;
-drop table if exists cinderella_card_informations;
-drop table if exists skill_informations;
-drop table if exists ability_informations;
 drop table if exists card_cinderellas;
 drop table if exists card_skills;
 drop table if exists card_abilities;
+drop table if exists card_informations;
+drop table if exists cinderella_card_informations;
+drop table if exists skill_informations;
+drop table if exists ability_informations;
 
 create table card_informations
 (
