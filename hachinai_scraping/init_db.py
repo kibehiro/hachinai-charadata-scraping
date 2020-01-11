@@ -24,9 +24,8 @@ def insert_dummy_data():
     with open('../json/dummy_data.json', encoding='utf-8') as f:
         dummy_data = json.load(f)
 
-    # TODO:DB関連の設定終わったら書き直す
     for data in dummy_data:
-        make_db.make_db(data)
+        make_db.insert_data(data)
 
 
 if __name__ == '__main__':
