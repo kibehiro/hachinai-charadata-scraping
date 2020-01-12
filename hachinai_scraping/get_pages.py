@@ -136,7 +136,7 @@ def write_error_log(card_url):
     with open('../Logs/error.log', mode='a', encoding='UTF-8') as f:
         error_page = 'ERROR URL: {}'.format(card_url)
         print(error_page)
-        f.write('\n' + error_page + '\n' + traceback.format_exc())
+        f.write(error_page + '\n' + traceback.format_exc() + '\n')
 
 
 def get_pages(card_url):
@@ -200,6 +200,6 @@ def get_pages(card_url):
 
     print('SUCCESS URL: {}'.format(card_url))
     with open('../Logs/success.log', mode='a', encoding='UTF-8') as f:
-        f.write('\nSUCCESS URL: {}'.format(card_url))
+        f.write('SUCCESS URL: {} \n'.format(card_url))
 
     return chara_data
