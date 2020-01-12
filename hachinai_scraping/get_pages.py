@@ -134,7 +134,7 @@ def get_ability(html):
 
 def write_error_log(card_url):
     with open('../Logs/error.log', mode='a', encoding='UTF-8') as f:
-        error_page = 'ERROR URL: https:{}'.format(card_url)
+        error_page = 'ERROR URL: {}'.format(card_url)
         print(error_page)
         f.write('\n' + error_page + '\n' + traceback.format_exc())
 
