@@ -136,6 +136,8 @@ def make_db():
 
     for card_url in card_list:
         data = get_pages(card_url)
+        if data is None:
+            continue
         insert_data(data)
         sleep(10)
 
