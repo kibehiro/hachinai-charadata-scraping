@@ -175,8 +175,9 @@ def get_pages(card_url):
                 chara_data.update({'cinderella_cards': get_cinderella_card(table)})
             except (IndexError, TypeError, ValueError) as e:
                 write_error_log(card_url)
+
         # スキル
-        if table_type == 'スキル名':
+        if re.search('スキル名', table_type):
             try:
                 chara_data.update({'skills': get_skill(table)})
             except (IndexError, TypeError, ValueError) as e:
