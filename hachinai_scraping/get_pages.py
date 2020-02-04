@@ -170,7 +170,7 @@ def get_pages(card_url):
                 write_error_log(card_url)
 
         # デレスト
-        if table_type == 'ランク':
+        if table_type == 'ランク' and 'cinderella_cards' not in chara_data:
             try:
                 chara_data.update({'cinderella_cards': get_cinderella_card(table)})
             except (IndexError, TypeError, ValueError) as e:
